@@ -1,10 +1,5 @@
-/******************************************************************************
 
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
 
-*******************************************************************************/
 
 #include <stdio.h>
 
@@ -18,6 +13,7 @@ int main()
     scanf("%d",n);
     for(l1=0;s1[l1]!='\0';l1++);
     for(l2=0;s2[l2]!='\0';l2++);
+    
     for(i=0;i<l1;i++)
     {
         t=s1[i];
@@ -32,6 +28,7 @@ int main()
         
         
     }
+    printf("%d",l);
     if(l1-l==n)
     {
         printf("yes");
@@ -42,3 +39,5 @@ int main()
 
     return 0;
 }
+
+
