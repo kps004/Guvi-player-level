@@ -1,10 +1,7 @@
 
 #include <stdio.h>
-
 int main()
-{
-    
-        int a[1000],i,j,k,min,n,p;
+{  int a[1000],i,j,k,min,n,p;
         scanf("%d %d",&n,&k);
         for(i=0;i<n;i++)
         {
@@ -21,7 +18,6 @@ int main()
                     min=a[j];
                     p=j;
                 }
-                
             }
             
             a[p]=3245;
