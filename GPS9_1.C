@@ -1,4 +1,5 @@
 
+
 #include <stdio.h>
 
 int main()
@@ -12,12 +13,14 @@ int main()
    l=0;
    for(i=0;i<n;i++)
    {
-       k=a[i]&a[i+1];
+       for(j=0;j<n;j++)
+       {
+       k=a[i]&a[j];
        if(l<k)
        {
            l=k;
        }
-       
+       }
    }
    printf("%d",l);
 
