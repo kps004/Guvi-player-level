@@ -1,25 +1,15 @@
 
-
 #include <stdio.h>
 
 int main()
 {
-    int a[100000],b[100000],i,n,j,k=0,l=0;
+    int j,a[100],l=0,i,n;
     scanf("%d",&n);
     for(i=0;i<n;i++)
-    {
-        scanf("%d",&a[i]);
-    }
+    scanf("%d",&a[i]);
+    n=n*(n+1)/2;
     
-    for(i=0;i<n;i++)
-    {
-        for(j=0;j<n;j++)
-        {
-            k++ ;
-        }
-        l++;
-    }
-    
-printf("k=%d l=%d",k,l);
+   
+printf("%d",n);
     return 0;
 }
