@@ -9,9 +9,14 @@ int main()
         scanf("%d",&a[i]);
     }
 
-
-for(i=0;i<n;i++)
+if(n==1)
 {
+    printf("%d",a[0]);
+}
+else
+{ 
+   for(i=0;i<n;i++)
+   {
     l=0;
     for(j=n;j>=i;j--)
     {
@@ -22,6 +27,7 @@ for(i=0;i<n;i++)
         l=l+a[j];
     }
     printf("%d ",l);
+  }
 }
     return 0;
 }
