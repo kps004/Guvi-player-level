@@ -1,65 +1,53 @@
-/******************************************************************************
 
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <stdio.h>
 
 int main()
 {
-    char s[100000],t;
-    int f,i,n,j,k,l,m;
+    char s[10000],t[100];
+    int n,i,j,k,l,last,front,f=0,p=0,insert;
     scanf("%[^\n]",s);
     for(l=0;s[l]!='\0';l++);
-    for(i=0;s[i]!=' ';i++)
+    for(last=l-1;s[last]!=' ';last--);
+    for(front=0;s[front]!=' ';front++);
+    
+    for(i=front+1;i<last;i++)
     {
-        if(s[i]!='\0'){
-        printf("%c",s[i]);
-        }
-        else
-          break;
-    }
-    if(i!=l)
-    {
-    for(i=i;s[i]!='\0';i++)
-    {
-        f=0;
-        if(s[i]==' ')
+        if((s[i]==' ')||(i==front+1))
         {
-            n=i+1;
-            while((s[n]!=' ')&&(s[n]!='\0'))
+            if(i==front+1)
             {
-               
-               n++; 
+                k=i;
             }
-              if(s[n]=='\0')
+            else
+            {
+                k=i+1;
+                
+            }
+            p=k;
+            
+            f=0;
+            while(s[k]!=' ')
+            {
+                t[f]=s[k];
+                f++;
+                k++;
+            }
+            for(j=f-1;j>=0;j--)
+            {
+                if(p<k)
                 {
-                    f=1;
-                    break;
+                s[p]=t[j];
+                p++;
                 }
-           
                 
-                   for(j=n;j>=i+1;j--)
-                   {
-                      printf("%c",s[j]);
-                      }
-            
-                
-            i=n-1;
+            }
         }
-    } 
-            
     }
-    ///printf("i=%d",i);
     
-    for(j=i;j<l;j++)
+    for(i=0;i<l;i++)
     {
-        printf("%c",s[j]);
+        printf("%c",s[i]);
     }
-    
-
     return 0;
 }
