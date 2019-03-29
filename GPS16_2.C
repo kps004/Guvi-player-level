@@ -3,50 +3,27 @@
 
 int main()
 {
-    char s[10000];
-    int i,j,k,l,m=0,pre=0;
+    char s[10000],t;
+    int i,k,j,l,count=0;
     scanf("%[^\n]",s);
-    for(k=0;s[k]!='\0';k++);
-    
-    for(i=0;i<k-1;i++)
+    for(l=0;s[l]!='\0';l++);
+    for(i=0;i<l-1;i++)
     {
-        if((s[i]=='a')||(s[i]=='e')||(s[i]=='i')||(s[i]=='o')||(s[i]=='u'))
+        if(((s[i]=='a')||(s[i]=='e')||(s[i]=='i')||(s[i]=='o')||(s[i]=='u'))&&((s[i+1]!='a')&&(s[i+1]!='e')&&(s[i+1]!='i')&&(s[i+1]!='o')&&(s[i+1]!='u')))
         {
-          if((s[i+1]!='a')&&(s[i+1]!='e')&&(s[i+1]!='i')&&(s[i+1]!='o')&&(s[i+1]!='u'))
-          {
-              m=m+2;
-             // if(++i<k)
-              i++;
-          }
+            count=count+2;
+            i++;
+            printf("count1=%d",count);
+        }
+        else
+        if(((s[i+1]=='a')||(s[i+1]=='e')||(s[i+1]=='i')||(s[i+1]=='o')||(s[i+1]=='u'))&&((s[i]!='a')&&(s[i]!='e')&&(s[i]!='i')&&(s[i]!='o')&&(s[i]!='u')))
+        {
+            count=count+2;
+            i++;
+            printf("count2=%d",count);
         }
     }
-
-printf("%d",m);
-    return 0;
-}
-ZZ
-#include <stdio.h>
-
-int main()
-{
-    char s[10000];
-    int i,j,k,l,m=0,pre=0;
-    scanf("%[^\n]",s);
-    for(k=0;s[k]!='\0';k++);
     
-    for(i=0;i<k-1;i++)
-    {
-        if((s[i]=='a')||(s[i]=='e')||(s[i]=='i')||(s[i]=='o')||(s[i]=='u'))
-        {
-          if((s[i+1]!='a')&&(s[i+1]!='e')&&(s[i+1]!='i')&&(s[i+1]!='o')&&(s[i+1]!='u'))
-          {
-              m=m+2;
-             // if(++i<k)
-              i++;
-          }
-        }
-    }
-
-printf("%d",m);
+printf("%d   ",count);
     return 0;
 }
