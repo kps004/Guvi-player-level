@@ -37,7 +37,7 @@ int main()
        min = a[i];
       for(j=i+1;j<n;j++)
       {
-          if(min<=a[j])
+          if(min<a[j])
           {
               p=j;
               min=a[j];
@@ -49,7 +49,7 @@ int main()
    }
    for(i=0;i<n;i++)
    {
-       printf("%d",a[i]);
+       printf("%d ",a[i]);
    }
 
     return 0;
