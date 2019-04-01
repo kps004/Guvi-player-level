@@ -19,7 +19,7 @@ int main()
    for(i=0;i<k;i++)
    {
        min = a[i];
-      for(j=i+1;j<k;j++)
+      for(j=i;j<k;j++)
       {
           if(min>=a[j])
           {
@@ -35,7 +35,7 @@ int main()
  for(i=k;i<n;i++)
    {
        min = a[i];
-      for(j=i+1;j<n;j++)
+      for(j=i;j<n;j++)
       {
           if(min<a[j])
           {
