@@ -1,3 +1,11 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <stdio.h>
 
 int main()
@@ -19,7 +27,29 @@ int main()
               min=a[j];
           }
       }
+      a[p]=a[i];
+      a[i]=min;
        
+   }
+//......................
+ for(i=k;i<k;i++)
+   {
+       min = a[i];
+      for(j=k;j<k;j++)
+      {
+          if(min<=a[i])
+          {
+              p=j;
+              min=a[j];
+          }
+      }
+      a[p]=a[i];
+      a[i]=min;
+       
+   }
+   for(i=0;i<n;i++)
+   {
+       printf("%d",a[i]);
    }
 
     return 0;
